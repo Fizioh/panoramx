@@ -1,0 +1,49 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+}
+
+.text {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+    color: whitesmoke;
+    font-size: 20px;
+    position: absolute;
+    top:50px;
+    left: 25%;
+    right: 30%;
+    text-align: center;
+}
+#container 
+{
+    width: 100%;
+    height: 100%;
+
+}
+.button {
+    position: absolute;
+    left: 40px;
+    top: 40px;
+    width: 100px;
+    height: 30px;
+    text-align: left;
+}
+#controlButton {
+    top: 1rem;
+}
+#modeButton {
+    top: 4rem;
+}
+#panorama1button {
+    top: 7rem;
+}
+#panorama2button {
+    top: 10rem;
+}
+#audioPlay {
+    top: 30rem;
+}
+#audioStop {
+    top: 32rem;
+}

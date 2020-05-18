@@ -1,0 +1,84 @@
+var panorama, panorama1, panorama2, viewer, container, infospot, controlButton, modeButton, audioPlay, audioStop, videoButton;
+
+container = document.querySelector ( '#container');
+controlButton = document.querySelector( '#controlButton');
+modeButton = document.querySelector ('#modeButton');
+panorama1 =  document.querySelector ('#panorama1button');
+panorama2 = document.querySelector ('#panorama2button');
+playAudioButton = document.querySelector('#audioPlay');
+stopButton = document.querySelector('#audioStop');
+videoButton = document.querySelector('#videoButton');
+
+panorama = new PANOLENS.ImagePanorama('https://live.staticflickr.com/65535/48501203321_cd550a3ec8_o.jpg');
+panorama1 = new PANOLENS.ImagePanorama( 'https://live.staticflickr.com/65535/48501207836_00db8ec7f3_o.jpg' );
+panorama2 = new PANOLENS.ImagePanorama( 'https://live.staticflickr.com/65535/48501203321_cd550a3ec8_o.jpg' );
+panoramaVideo = new PANOLENS.VideoPanorama('https://youtu.be/hKudSWQtksQ');
+viewer = new PANOLENS.Viewer ( { container: container,
+output:'console'});
+viewer.add ( panorama );
+viewer.add ( panorama1 );
+viewer.add( panorama2 );
+viewer.add(panoramaVideo);
+infospot = new PANOLENS.Infospot ( 350, PANOLENS.DataImage.Info );
+infospot.position.set ( 0, 0, -5000);
+infospot.addHoverText ('The City of Angels', 30);
+panorama.add ( infospot );
+var controlIndex = PANOLENS.CONTROLS.ORBIT;
+var modeIndex = 0;
+;
+/* Activation position fixe */
+
+controlButton.addEventListener('click', function() {
+    controlIndex = controlIndex >= 1 ? 0 :
+    controlIndex + 1;
+    switch (controlIndex) {
+        case 0: viewer.enableControl(PANOLENS.CONTROLS.ORBIT); break;
+        case 1: viewer.enableControl(PANOLENS.CONTROLS.DEVICEORIENTATION); break;
+
+    }
+});
+
+/* Activation changement de vue */
+
+modeButton.addEventListener ('click', function() {
+    modeIndex = modeIndex >= 2 ? 0 : modeIndex +1;
+    switch ( modeIndex ) {
+        case 0: viewer.disableEffect(); break;
+        case 1: viewer.enableEffect( PANOLENS.MODES.CARDBOARD ); break;
+        case 2: viewer.enableEffect(PANOLENS.MODES.STEREO); break;
+        default: break;
+    }
+});
+
+/*changement Panorama */
+
+panorama1button.addEventListener ('click', 
+function() {
+    viewer.setPanorama(panorama1);
+});
+panorama2button.addEventListener('click', 
+function() {
+    viewer.setPanorama(panorama2);
+});
+
+
+/* Ajout de l'audio */
+
+var listener = new THREE.AudioListener();
+viewer.getCamera().add(listener);
+var audioLoader = new THREE.AudioLoader();
+var sound = new THREE.PositionalAudio(listener);
+audioLoader.load('https://threejs.org/examples/sounds/358232_j_s_song.mp3', function(buffer) {
+    audioBuffer = buffer;
+    sound.setBuffer(buffer);
+    playAudioButton.addEventListener('click', function(){
+        sound.play();
+    });
+
+    stopButton.addEventListener('click', function(){
+        sound.stop();
+    });
+});
+
+/* Ajout de Video */
+
