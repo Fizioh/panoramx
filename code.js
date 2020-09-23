@@ -11,7 +11,7 @@ videoButton = document.querySelector('#videoButton');
 
 panorama = new PANOLENS.ImagePanorama('https://live.staticflickr.com/65535/48501203321_cd550a3ec8_o.jpg');
 panorama1 = new PANOLENS.ImagePanorama( 'https://live.staticflickr.com/65535/48501207836_00db8ec7f3_o.jpg' );
-panorama2 = new PANOLENS.ImagePanorama( 'https://live.staticflickr.com/65535/48501203321_cd550a3ec8_o.jpg' );
+panorama2 = new PANOLENS.ImagePanorama( 'https://static1.squarespace.com/static/553fb34be4b01d70400fc6dd/t/5ba011bf8985838f944c8735/1537216979517/WarpRing.png' );
 panoramaVideo = new PANOLENS.VideoPanorama('https://youtu.be/hKudSWQtksQ');
 viewer = new PANOLENS.Viewer ( { container: container,
 output:'console'});
