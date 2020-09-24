@@ -1,32 +1,53 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en" >
 <head>
- <title>Panoram X</title>
- <link rel="stylesheet" href="style.css">
-
+  <meta charset="UTF-8">
+  <title>Panolens JS</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
-
 <body>
+
+<div class="text"> 
     
+<p> 3D Panoramas with Panolens.JS </p>
+    
+</div>  
+    
+<!-- container -->
+<div id="container"></div>
+<!-- container -->
 
-<div class="text">
-<h1>PanoramX</h1>
-</div>
+<!-- add some control buttons -->
 
-<div id="container">
-<button id="controlButton" class="button">Position fixe</button>
-<button id="modeButton" class="button">Jumelles</button>
-<button id="panorama1button" class="button">Panorama 1</button>
-<button id="panorama2button" class="button">Panorama 2</button>
-<button id="audioPlay" class="button">Musique</button>
-<button id="audioStop" class="button">Pause</button>
-</div>
+<button id="controlButton" class="button">Fix Position</button>
+<button id="modeButton" class="button">Toggle Modes</button>
+
+<!-- end of buttons --> 
+    
+<!-- add buttons to change panorams -->
+
+<button id="btn1" class="button">Panorama 1</button>
+<button id="btn2" class="button">Panorama 2</button>
+
+<!-- end of buttons -->
+    
+<!-- add buttons to play and stop audio -->
+
+<button id="audio-play-button" class="button" >Play Audio</button>
+<button id="audio-stop-button" class="button" >Stop Audio</button>
+
+<!-- end of buttons -->
+    
+<!-- add button to play video -->
+
+<button id="video-play-button" class="button" >Play Video</button>
+
+<!-- end of buttons -->
 
 
-<script src="https://pchen66.github.io/js/three/three.min.js"></script>
-<script src="https://rawgit.com/pchen66/panolens.js/dev/build/panolens.min.js"></script>
-<script src="./code.js"></script>
+<script src='https://pchen66.github.io/js/three/three.min.js'></script>
+<script src='https://rawgit.com/pchen66/panolens.js/dev/build/panolens.min.js'></script>
+<script  src="./script.js"></script>
+
 </body>
-
 </html>
