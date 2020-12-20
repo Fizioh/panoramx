@@ -9,41 +9,97 @@ html, body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
     color: whitesmoke;
     font-size: 20px;
-    position: absolute;
-    top:50px;
-    left: 25%;
+    top:30px;
+	left: 25%;
+	position: absolute;
+
     right: 30%;
     text-align: center;
 }
 #container 
 {
-    width: 100%;
+	width: 100%;
     height: 100%;
 
 }
-.button {
+.colonne {
+	display: grid;
+	position: absolute;
+
+}
+
+.btn-one {
+    left: 20px;
+	top: 20px;
+	margin-top: 3px;
+    width: 6em;
+    height: 3em;
+    border-radius: 6px;
+}
+/* TEST BUTOON 666666666666666666666666666666666666666666666 */
+
+.btn-one {
+	color: antiquewhite;
+    transition: all 0.9s;
+    position: relative;
+    background-color:  #66A182;
+}
+.btn-one span {
+	transition: all 0.3s;
+}
+.btn-one::before {
+    content: '';
     position: absolute;
-    left: 40px;
-    top: 40px;
-    width: 100px;
-    height: 30px;
-    text-align: left;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	opacity: 0;
+	transition: all 0.9s;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: rgba(255,255,255,0.5);
+	border-bottom-color: rgba(255,255,255,0.5);
+	transform: scale(0.1, 1);
 }
-#controlButton {
-    top: 1rem;
+.btn-one:hover span {
+	letter-spacing: 2px;
 }
-#modeButton {
-    top: 4rem;
+.btn-one:hover::before {
+	opacity: 1;	
+	transform: scale(1, 1);	
 }
-#panorama1button {
-    top: 7rem;
+.btn-one::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	transition: all 0.3s;
+	background-color: rgba(255,255,255,0.1);
 }
-#panorama2button {
-    top: 10rem;
+.btn-one:hover::after {
+	opacity: 0;	
+	transform: scale(0.1, 1);
 }
-#audioPlay {
-    top: 30rem;
-}
-#audioStop {
-    top: 32rem;
+
+
+/* FIN TESSSSSSSSSSSSSSSSST */
+
+@media screen and (max-width: 640px) {
+
+	.btn-one {
+		left: 20px;
+		top: 20px;
+		width: 12em;
+		height: 8em;
+		border-radius: 8px;
+	}
+
+
 }
