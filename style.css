@@ -32,8 +32,8 @@ html, body {
     left: 20px;
 	top: 20px;
 	margin-top: 3px;
-    width: 8em;
-    height: 4em;
+    width: 10em;
+    height: 5em;
     border-radius: 6px;
 }
 /* TEST BUTOON 666666666666666666666666666666666666666666666 */
@@ -96,8 +96,8 @@ html, body {
 	.btn-one {
 		left: 20px;
 		top: 20px;
-		width: 24em;
-		height: 16em;
+		width: 35px;
+		height: 35em;
 		border-radius: 8px;
 	}
 
