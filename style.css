@@ -32,8 +32,8 @@ html, body {
     left: 20px;
 	top: 20px;
 	margin-top: 3px;
-    width: 6em;
-    height: 3em;
+    width: 8em;
+    height: 4em;
     border-radius: 6px;
 }
 /* TEST BUTOON 666666666666666666666666666666666666666666666 */
@@ -42,7 +42,7 @@ html, body {
 	color: antiquewhite;
     transition: all 0.9s;
     position: relative;
-    background-color:  #66A182;
+    background-color:  black;
 }
 .btn-one span {
 	transition: all 0.3s;
@@ -96,8 +96,8 @@ html, body {
 	.btn-one {
 		left: 20px;
 		top: 20px;
-		width: 12em;
-		height: 8em;
+		width: 24em;
+		height: 16em;
 		border-radius: 8px;
 	}
 
