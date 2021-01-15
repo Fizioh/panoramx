@@ -52,6 +52,17 @@ controlButton.addEventListener('touchstart', function() {
 
     }
 });
+/* DEVICE MOTION IPHONE */
+
+controlButton.addEventListener('touchstart', function() {
+    controlIndex = controlIndex >= 1 ? 0 :
+    controlIndex + 1;
+    switch (controlIndex) {
+        case 0: viewer.enableControl(PANOLENS.CONTROLS.ORBIT); break;
+        case 1: viewer.enableControl(PANOLENS.CONTROLS.DEVICEMOTION); break;
+
+    }
+});
 
 /* Activation changement de vue */
 
