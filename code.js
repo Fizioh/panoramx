@@ -16,8 +16,8 @@ panorama1 = new PANOLENS.ImagePanorama( 'https://live.staticflickr.com/65535/485
 panorama2 = new PANOLENS.ImagePanorama( 'https://static1.squarespace.com/static/553fb34be4b01d70400fc6dd/t/5ba011bf8985838f944c8735/1537216979517/WarpRing.png' );
 viewer = new PANOLENS.Viewer ( { container: container,
 output:'console',
-autoRotate: true, autoRateSpeed: 0.8,
-autoRotateActivationDuration: 800});
+autoRotate: true, autoRateSpeed: 0.9,
+autoRotateActivationDuration: 1250});
 viewer.add ( panorama );
 viewer.add ( panorama1 );
 viewer.add( panorama2 );
