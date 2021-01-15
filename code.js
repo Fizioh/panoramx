@@ -8,7 +8,7 @@ panorama2 = document.querySelector ('#panorama2button');
 playAudioButton = document.querySelector('#audioPlay');
 stopButton = document.querySelector('#audioStop');
 
-panorama_video = new PANOLENS.VideoPanorama( 'https://www.youtube.com/watch?v=BMU7CXiIbT4');
+/* panorama_video = new PANOLENS.VideoPanorama( 'https://www.youtube.com/watch?v=BMU7CXiIbT4'); */
 
 
 panorama = new PANOLENS.ImagePanorama('https://live.staticflickr.com/65535/48501203321_cd550a3ec8_o.jpg');
