@@ -54,6 +54,18 @@ modeButton.addEventListener ('click', function() {
     }
 });
 
+/* Activation changement de vue Iphone */
+
+modeButton.addEventListener ('touchstart', function() {
+    modeIndex = modeIndex >= 2 ? 0 : modeIndex +1;
+    switch ( modeIndex ) {
+        case 0: viewer.disableEffect(); break;
+        case 1: viewer.enableEffect( PANOLENS.MODES.CARDBOARD ); break;
+        case 2: viewer.enableEffect(PANOLENS.MODES.STEREO); break;
+        default: break;
+    }
+});
+
 /*changement Panorama */
 
 panorama1button.addEventListener ('click', 
@@ -65,6 +77,15 @@ function() {
     viewer.setPanorama(panorama2);
 });
 
+/* Panorama Iphone */ 
+panorama1button.addEventListener ('touchstart', 
+function() {
+    viewer.setPanorama(panorama1);
+});
+panorama2button.addEventListener('touchstart', 
+function() {
+    viewer.setPanorama(panorama2);
+});
 
 /* Ajout de l'audio */
 
