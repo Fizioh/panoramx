@@ -13,7 +13,6 @@ html, body {
     top:30px;
 	left: 25%;
 	position: absolute;
-
     right: 30%;
     text-align: center;
 }
@@ -26,23 +25,22 @@ html, body {
 .colonne {
 	display: grid;
 	position: absolute;
+	margin-top: 10em;
 
 }
 
 .btn-one {
     left: 20px;
 	top: 20px;
+	font-size: 0.6em;
 	margin-top: 3px;
     width: 10em;
     height: 5em;
     border-radius: 6px;
-}
-/* TEST BUTOON 666666666666666666666666666666666666666666666 */
-
-.btn-one {
 	color: antiquewhite;
-    transition: all 0.9s;
-    position: relative;
+	transition: all 0.9s;
+	display: block;
+	position: relative;
     background-color:  black;
 }
 .btn-one span {
@@ -92,15 +90,6 @@ html, body {
 
 /* FIN TESSSSSSSSSSSSSSSSST */
 
-@media screen and (max-width: 640px) {
-
-	.btn-one {
-		left: 20px;
-		top: 20px;
-		width: 35px;
-		height: 35em;
-		border-radius: 8px;
-	}
-
-
+@media only screen and(max-width: 599px) {
+	
 }
