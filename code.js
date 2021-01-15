@@ -17,7 +17,7 @@ panorama2 = new PANOLENS.ImagePanorama( 'https://static1.squarespace.com/static/
 viewer = new PANOLENS.Viewer ( { container: container,
 output:'console',
 autoRotate: true, autoRateSpeed: 0.9,
-autoRotateActivationDuration: 1250});
+autoRotateActivationDuration: 0});
 viewer.add ( panorama );
 viewer.add ( panorama1 );
 viewer.add( panorama2 );
