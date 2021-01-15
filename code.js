@@ -16,8 +16,8 @@ panorama1 = new PANOLENS.ImagePanorama( 'https://live.staticflickr.com/65535/485
 panorama2 = new PANOLENS.ImagePanorama( 'https://static1.squarespace.com/static/553fb34be4b01d70400fc6dd/t/5ba011bf8985838f944c8735/1537216979517/WarpRing.png' );
 viewer = new PANOLENS.Viewer ( { container: container,
 output:'console',
-autoRotate: true, autoRateSpeed: 0.9,
-autoRotateActivationDuration: 0});
+autoRotate: true, autoRateSpeed: 0.6,
+autoRotateActivationDuration: 1800});
 viewer.add ( panorama );
 viewer.add ( panorama1 );
 viewer.add( panorama2 );
@@ -33,6 +33,17 @@ var modeIndex = 0;
 /* Activation position fixe */
 
 controlButton.addEventListener('click', function() {
+    controlIndex = controlIndex >= 1 ? 0 :
+    controlIndex + 1;
+    switch (controlIndex) {
+        case 0: viewer.enableControl(PANOLENS.CONTROLS.ORBIT); break;
+        case 1: viewer.enableControl(PANOLENS.CONTROLS.DEVICEORIENTATION); break;
+
+    }
+});
+/* Activation position fixe Iphone*/
+
+controlButton.addEventListener('touchstart', function() {
     controlIndex = controlIndex >= 1 ? 0 :
     controlIndex + 1;
     switch (controlIndex) {
