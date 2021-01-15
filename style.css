@@ -32,10 +32,10 @@ html, body {
 .btn-one {
     left: 20px;
 	top: 20px;
-	font-size: 1.8em;
+	font-size: 10em;
 	margin-top: 3px;
-    width: 15em;
-    height: 10em;
+    width: 45em;
+    height: 30em;
     border-radius: 6px;
 	color: antiquewhite;
 	transition: all 0.9s;
